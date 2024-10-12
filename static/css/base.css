@@ -1,0 +1,14 @@
+h1 {
+    color: aqua;
+}
+
+.mylogo {
+   height: 300px;
+    width: auto;
+}
+
+body{
+    backgroundc-color: wheat;
+    display: flex;
+    justify-content: center;
+}
