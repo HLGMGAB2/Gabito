@@ -1,6 +1,10 @@
 {% extends 'app/base.html' %}
 {% load static %}
 {% block content %}
-    <h1>Hellow World</h1>
-<img class="mylogo" src="{% static 'images/peter.png.png'%}">
+    {% for post in post_list %}
+        <div class="post-entry">
+            <h2><a href="">{{post.title}}</a> </h2>
+            <p>{{post.body}}</p>
+        </div>
+     {% endfor %}
 {% endblock content %}

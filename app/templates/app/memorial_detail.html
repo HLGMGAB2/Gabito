@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ object.name }} - Memorial</title>
+    <style>
+        /* Add your CSS styles here */
+    </style>
+</head>
+<body>
+    <h1>{{ object.name }}</h1>
+    <p>Born: {{ object.date_of_birth }}</p>
+    <p>Died: {{ object.date_of_death }}</p>
+    <p>{{ object.description }}</p>
+
+    {% if object.image %}
+        <img src="{{ object.image.url }}" alt="{{ object.name }}">
+    {% endif %}
+
+    <a href="{% url 'memorial_update' pk=object.pk %}">Edit</a> |
+    <a href="{% url 'memorial_delete' pk=object.pk %}">Delete</a>
+</body>
+</html>

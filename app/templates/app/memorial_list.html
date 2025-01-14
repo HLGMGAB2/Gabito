@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memorial List</title>
+    <style>
+        /* Add your CSS styles here */
+    </style>
+</head>
+<body>
+    <h1>Memorials</h1>
+
+    <ul>
+        {% for memorial in object_list %}
+            <li>
+                <a href="{% url 'memorial_detail' pk=memorial.pk %}">{{ memorial.name }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'memorial_form' %}">Add New Memorial</a>
+</body>
+</html>
